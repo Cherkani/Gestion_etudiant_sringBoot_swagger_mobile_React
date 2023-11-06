@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rouded_shape"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/nameecriture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="firstname :"
+            android:textSize="20dp"
+
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/firstnameTextStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tt :"
+            android:textSize="20dp"
+
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/nameecriture"
+            android:background="#FFF"
+            android:padding="10dp"
+            tools:ignore="UnknownId" />
+
+
+        <TextView
+            android:id="@+id/nameecriture2"
+            android:layout_below="@+id/nameecriture"
+            android:text="lastname :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_below="@+id/firstnameTextStudent"
+            android:layout_toEndOf="@+id/nameecriture2"
+            android:id="@+id/lastnameTextStudent"
+            android:text="tt :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp"
+            tools:ignore="UnknownId" />
+
+--
+        <TextView
+            android:id="@+id/nameecriture3"
+            android:layout_below="@+id/nameecriture2"
+            android:text="login :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_below="@+id/lastnameTextStudent"
+            android:layout_toEndOf="@+id/nameecriture3"
+            android:id="@+id/loginTextStudent"
+            android:text="tt :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp"
+            tools:ignore="UnknownId" />
+
+
+        <TextView
+            android:id="@+id/nameecriture4"
+            android:layout_below="@+id/nameecriture3"
+            android:text="telephone :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_below="@+id/loginTextStudent"
+            android:layout_toEndOf="@+id/nameecriture4"
+            android:id="@+id/telephoneTextStudent"
+            android:text="tt :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp"
+            tools:ignore="UnknownId" />
+
+        <TextView
+            android:id="@+id/nameecriture5"
+            android:layout_below="@+id/nameecriture4"
+            android:text="filiere :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_below="@+id/telephoneTextStudent"
+            android:layout_toEndOf="@+id/nameecriture5"
+            android:id="@+id/filiereTextStudent"
+            android:text="tt :"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="#FFF"
+            android:padding="10dp"
+            tools:ignore="UnknownId" />
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
