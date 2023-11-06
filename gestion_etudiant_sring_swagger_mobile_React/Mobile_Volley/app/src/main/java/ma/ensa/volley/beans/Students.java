@@ -27,7 +27,7 @@ public class Students {
     public Students(String firstname, String password, String lastname, String telephone, String login, Filiere filiere) {
         this.firstname = firstname;
         this.password = password;
-        this.lastname = lastname;
+        this.lastname = password;
         this.telephone = telephone;
         this.login = login;
         this.filiere = filiere;
@@ -96,4 +96,5 @@ public class Students {
     public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
+
 }

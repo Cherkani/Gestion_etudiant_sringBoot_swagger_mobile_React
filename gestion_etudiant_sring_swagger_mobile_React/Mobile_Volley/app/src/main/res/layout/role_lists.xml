@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<ListView
+    android:id="@+id/idroleListView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/backButtonRoleAdd"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp" />
 
-    <ListView
-        android:id="@+id/idroleListView"
-        android:layout_width="match_parent"
-        android:layout_height="681dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:layout_alignParentTop="true"
-        />
-
-    <Button
-android:layout_alignParentBottom="true"
-        android:id="@+id/backButtonRoleAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="683dp"
-        android:text="Add Role"
-
-        android:background="#446688"
-        tools:ignore="UnknownId" />
+<Button
+    android:id="@+id/backButtonRoleAdd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="Add Role"
+    android:background="#446688"
+    tools:ignore="UnknownId" />
 </RelativeLayout>
+

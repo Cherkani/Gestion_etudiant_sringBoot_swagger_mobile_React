@@ -7,23 +7,20 @@
     <ListView
         android:id="@+id/idStudentsListView"
         android:layout_width="match_parent"
-        android:layout_height="681dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/backButtonStudentsAdd"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:layout_alignParentTop="true"
-        />
+        tools:layout_editor_absoluteY="1dp" />
+
     <Button
-        android:layout_alignParentBottom="true"
         android:id="@+id/backButtonStudentsAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-
-        android:layout_marginEnd="0dp"
-        android:layout_marginTop="683dp"
-        android:text="Add Students"
-
+        android:layout_alignParentBottom="true"
+        android:text="Add Role"
         android:background="#446688"
         tools:ignore="UnknownId" />
 </RelativeLayout>
+

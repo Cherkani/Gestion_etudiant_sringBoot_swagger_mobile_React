@@ -65,7 +65,7 @@ public class StudentAdd extends AppCompatActivity {
         password = findViewById(R.id.passwordeditTextStudent);
 
         bnAddStudent = findViewById(R.id.bnAddStudent);
-        bnAddStudent.setOnClickListener(new View.OnClickListener() {
+        bnRetourStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StudentAdd.this, MainActivity.class);
@@ -77,8 +77,8 @@ public class StudentAdd extends AppCompatActivity {
         bnVoirStudents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudentAdd.this, StudentVoir.class);
-                startActivity(intent);
+               Intent intent = new Intent(StudentAdd.this, StudentVoir.class);
+               startActivity(intent);
             }
         });
 
