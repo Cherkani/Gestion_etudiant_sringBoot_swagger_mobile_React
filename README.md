@@ -1,4 +1,3 @@
-![Screenshot 2023-12-02 052352](https://github.com/Cherkani/Gestion_etudiant_sringBoot_swagger_mobile_React/assets/124716884/2d1c63da-a969-43b6-a2eb-f453351b9b34)# Gestion_etudiant_sringBoot_swagger_mobile_React
 
 
 #Mobile
@@ -20,5 +19,4 @@ https://github.com/Cherkani/Gestion_etudiant_sringBoot_swagger_mobile_React/asse
 
 #swager
 
-![Uploading Screenshot 2023-12-02 052352.png…]()
-
+![Screenshot 2023-12-02 052352](https://github.com/Cherkani/Gestion_etudiant_sringBoot_swagger_mobile_React/assets/124716884/89a18ca4-cbe3-4322-97be-46b8e2a32885)
