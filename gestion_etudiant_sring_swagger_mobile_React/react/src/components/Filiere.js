@@ -6,8 +6,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Filiere = () => {
-  const [majors, setMajors] = useState([]);
-  const [major, setMajor] = useState({
+  const [Filieres, setFilieres] = useState([]);
+  const [Filiere, setFiliere] = useState({
     id: "",
     code: "",
     libelle: "",
@@ -17,64 +17,64 @@ const Filiere = () => {
   const [idToDelete, setIdToDelete] = useState(null);
   const url = "http://localhost:8080/api/v1/filieres";
 
-  const fetchMajors = async () => {
+  const fetchFilieres = async () => {
     setLoading(true);
     try {
       const response = await axios.get(url);
-      setMajors(response.data);
+      setFilieres(response.data);
     } catch (error) {
-      console.error("Error fetching majors:", error);
+      console.error("Error fetching Filieres:", error);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchMajors();
+    fetchFilieres();
   }, []);
 
-  const handleMajor = (e) => {
-    setMajor({ ...major, [e.target.name]: e.target.value });
+  const handleFiliere = (e) => {
+    setFiliere({ ...Filiere, [e.target.name]: e.target.value });
   };
 
   const handleUpdate = (id, code, libelle) => {
     setUpdateMode(true);
-    setMajor({ id, code, libelle });
+    setFiliere({ id, code, libelle });
   };
 
-  const addMajor = async () => {
+  const addFiliere = async () => {
     try {
-      await axios.post(url, major);
-      fetchMajors();
-      setMajor({ id: "", code: "", libelle: "" });
+      await axios.post(url, Filiere);
+      fetchFilieres();
+      setFiliere({ id: "", code: "", libelle: "" });
       notify("added");
     } catch (error) {
-      console.error("Error adding major:", error);
+      console.error("Error adding Filiere:", error);
     }
   };
 
-  const updateMajor = async () => {
+  const updateFiliere = async () => {
     try {
-      await axios.put(`${url}/updateFiliere/${major.id}`, major);
-      fetchMajors();
-      setMajor({ id: "", code: "", libelle: "" });
+      await axios.put(`${url}/updateFiliere/${Filiere.id}`, Filiere);
+      fetchFilieres();
+      setFiliere({ id: "", code: "", libelle: "" });
       setUpdateMode(false);
       notify("updated");
     } catch (error) {
-      console.error("Error updating major:", error);
+      console.error("Error updating Filiere:", error);
     }
   };
 
-  const deleteMajor = async () => {
+  const deleteFiliere = async () => {
     try {
       await axios.delete(`${url}/deleteFiliere/${idToDelete}`);
-      fetchMajors();
-      setMajor({ id: "", code: "", libelle: "" });
+      fetchFilieres();
+      setFiliere({ id: "", code: "", libelle: "" });
       setUpdateMode(false);
       notify("deleted");
       closeModal();
     } catch (error) {
-      console.error("Error deleting major:", error);
+      console.error("Error deleting Filiere:", error);
     }
   };
 
@@ -90,7 +90,7 @@ const Filiere = () => {
   };
 
   const notify = (op) =>
-    toast.success(`Major ${op} successfully`, {
+    toast.success(`Filiere ${op} successfully`, {
       position: "bottom-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -112,22 +112,22 @@ const Filiere = () => {
             className="role-input"
             placeholder="Entrer votre niveau"
             name="code"
-            onChange={handleMajor}
-            value={major.code}
+            onChange={handleFiliere}
+            value={Filiere.code}
           />
           <input
             className="role-input"
             placeholder="Entrer votre nom"
             name="libelle"
-            onChange={handleMajor}
-            value={major.libelle}
+            onChange={handleFiliere}
+            value={Filiere.libelle}
           />
           {!updateMode ? (
-            <button className="add-button" onClick={addMajor}>
+            <button className="add-button" onClick={addFiliere}>
               Ajouter
             </button>
           ) : (
-            <button className="update-button" onClick={updateMajor}>
+            <button className="update-button" onClick={updateFiliere}>
               <div>
                 <p>Modifier</p>
               </div>
@@ -146,28 +146,28 @@ const Filiere = () => {
                 <p>Name</p>
                 <p>Action</p>
               </div>
-              {majors.map((major, index) => (
+              {Filieres.map((Filiere, index) => (
                 <div
                   className={`data-row ${
                     index % 2 === 0 ? "even-row" : "odd-row"
                   }`}
                   key={index}
                 >
-                  <p>{major.id}</p>
-                  <p>{major.code}</p>
-                  <p>{major.libelle}</p>
+                  <p>{Filiere.id}</p>
+                  <p>{Filiere.code}</p>
+                  <p>{Filiere.libelle}</p>
                   <div className="action-buttons">
                     <button
                       className="update-button"
                       onClick={() =>
-                        handleUpdate(major.id, major.code, major.libelle)
+                        handleUpdate(Filiere.id, Filiere.code, Filiere.libelle)
                       }
                     >
                       Modifier
                     </button>
                     <button
                       className="delete-button"
-                      onClick={() => showModal(major.id)}
+                      onClick={() => showModal(Filiere.id)}
                     >
                       Supprimer
                     </button>
@@ -189,7 +189,7 @@ const Filiere = () => {
           <button onClick={closeModal} className="cancel-button">
             Cancel
           </button>
-          <button onClick={deleteMajor} className="delete-button">
+          <button onClick={deleteFiliere} className="delete-button">
             Supprimer
           </button>
         </div>
