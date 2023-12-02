@@ -13,6 +13,7 @@ import ma.projet.services.FiliereService;
 
 @RestController
 @RequestMapping("/api/v1/filieres")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FiliereController {
 
 	@Autowired

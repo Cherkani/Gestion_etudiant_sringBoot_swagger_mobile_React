@@ -1,0 +1,21 @@
+/* styles.css */
+
+.custom-navbar {
+  background-color: #fff8dc;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-brand {
+  font-size: 36px;
+}
+
+.custom-link {
+  font-size: 40px;
+  color: #333;
+}
+
+.custom-link.active {
+  color: #9500ff;
+  font-size: 30px;
+}

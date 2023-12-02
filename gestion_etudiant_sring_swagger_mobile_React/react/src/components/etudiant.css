@@ -1,0 +1,115 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.role-container {
+  margin-bottom: 20px;
+}
+
+.role-input {
+  padding: 8px;
+  margin-right: 20px;
+  margin-bottom: 10px; /* Add this line to create space between fields */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.data-row td {
+  min-width: 150px; /* Adjust this value to your desired minimum cell width */
+}
+.add-button,
+.update-button {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.larger-text {
+  font-size: 20px; /* Adjust the size as needed */
+}
+.add-button {
+  background-color: green;
+}
+
+.update-button {
+  background-color: rgb(49, 145, 149);
+}
+
+.add-button:hover,
+.update-button:hover {
+  background-color: darkgreen;
+}
+.data-container {
+  width: 100%; /* Adjust this value to your desired width */
+  overflow-x: auto; /* Add this property to enable horizontal scrolling if needed */
+}
+
+.data-header {
+  font-weight: bold;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.cancel-button,
+.delete-button {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+  background-color: gray;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.cancel-button:hover,
+.delete-button:hover {
+  background-color: darkgray;
+}
+
+.Modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 200px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.ReactModal__Overlay,
+.ReactModal__Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-row:nth-child(odd) {
+  background-color: #ffffff;
+}
